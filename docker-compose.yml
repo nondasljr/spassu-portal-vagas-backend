@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  api:
+    build: .
+    container_name: spassu_api
+    command: >
+      python -m debugpy --listen 0.0.0.0:5678
+      manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+      - "5678:5678"
+    env_file:
+      - ./.env
+    volumes:
+      - ./:/app:delegated
+      - sqlite_data:/app/sqlite_data
+    working_dir: /app
+volumes:
+  sqlite_data:
