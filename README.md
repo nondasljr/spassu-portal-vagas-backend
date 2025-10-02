@@ -5,6 +5,7 @@ API para cadastro e consulta de vagas, construída com **Django 5**, **Django RE
 - Documentação automática (Swagger): `/api/docs/`  
 - Schema OpenAPI: `/api/schema/`  
 - Admin do Django: `/admin/`
+- Usuário padrão: spassu-a senha: aprovar
 
 ---
 
